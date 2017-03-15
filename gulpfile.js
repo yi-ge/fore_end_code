@@ -20,6 +20,10 @@ gulp.task('ESlint', function () {
 gulp.task('ESlint_S', ['ESlint'], function () {
   // 静态服务器
   browserSync.init({
+    port: 3001,
+    ui: {
+      port: 3002
+    },
     server: {
       baseDir: './src'
     }
